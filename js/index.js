@@ -27,3 +27,18 @@ blog.addEventListener("wheel", event => {
 // aboutUS.addEventListener("keydown", event => {
 //   event.target.setAttribute("href", "https://wwww.google.com");
 // }); extremely delayed
+
+const contact = document.querySelector(
+  "header.main-navigation nav a:last-child"
+);
+
+contact.addEventListener("drag", event => {
+  console.log(`drag: ${event}`);
+});
+
+const headerEle = document.querySelector("header");
+
+window.addEventListener("load", event => {
+  console.log(event);
+  alert(`This page took ${Math.floor(event.timeStamp)} milliseconds to load.`);
+});
