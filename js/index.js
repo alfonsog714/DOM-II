@@ -63,3 +63,12 @@ textArea.addEventListener("select", event => {
   console.log(event);
   textArea.setAttribute("placeholder", "new words...");
 });
+
+const allLinks = Array.from(document.querySelectorAll(".nav .nav-link"));
+
+allLinks.forEach(link => {
+  link.addEventListener("click", event => {
+    event.preventDefault();
+  });
+});
+console.log(allLinks);
