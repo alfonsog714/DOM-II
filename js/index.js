@@ -42,3 +42,17 @@ window.addEventListener("load", event => {
   console.log(event);
   alert(`This page took ${Math.floor(event.timeStamp)} milliseconds to load.`);
 });
+
+let darkMode = "#566573";
+let textC = "#fff";
+const body = document.querySelector("body");
+
+window.addEventListener("resize", event => {
+  console.log(`window height: ${event.target.innerHeight}`);
+  console.log(`window width: ${event.target.innerWidth}`);
+  if (event.target.innerWidth <= 500) {
+    body.style.backgroundColor = darkMode;
+  } else {
+    body.style.backgroundColor = "";
+  }
+});
