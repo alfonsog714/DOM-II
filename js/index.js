@@ -56,3 +56,10 @@ window.addEventListener("resize", event => {
     body.style.backgroundColor = "";
   }
 });
+
+const textArea = document.querySelector("#text");
+
+textArea.addEventListener("select", event => {
+  console.log(event);
+  textArea.setAttribute("placeholder", "new words...");
+});
